@@ -1,0 +1,226 @@
+@import url('http://fonts.cdnfonts.com/css/copperplate');
+@import url('http://fonts.cdnfonts.com/css/bastamanbold');
+
+
+header {
+    text-align: center;
+    color: white;
+    font-size: 30pt;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'BastamanBold', sans-serif;
+}
+
+body {
+    background-image: url(../imgs/Shiny\ Overlay.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section {
+    width: 100vw;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.img {
+    width: 250px;
+    height: 250px;
+}
+
+div.container {
+    background: rgba(236, 236, 236, 0.24);
+    color: rgb(68, 23, 66);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.432);
+    flex-direction: column;
+    font-family: 'BastamanBold', sans-serif;
+}
+
+div.container b {
+    font-size: 22pt;
+    margin-bottom: 20px;
+}
+
+input#iptemail {
+    margin: 1px;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-bottom-color: rgb(68, 23, 66);
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-size: 14pt;
+}
+
+#iptemail:focus,
+input:hover {
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 1rem;
+    border-color: rgb(68, 23, 66);
+}
+
+#iptemail::placeholder {
+    color: rgb(68, 23, 66);
+}
+
+#iptemail:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+
+input#iptsenha {
+    margin: 1px;
+    line-height: 28px;
+    border: 2px solid transparent;
+    border-bottom-color: rgb(68, 23, 66);
+    padding: .2rem 0;
+    outline: none;
+    background-color: transparent;
+    color: #ffffff;
+    transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    margin-top: 20px;
+    font-size: 14pt;
+}
+
+#iptsenha:focus,
+input:hover {
+    outline: none;
+    padding: .2rem 1rem;
+    border-radius: 1rem;
+    border-color: rgb(68, 23, 66);
+}
+
+#iptsenha::placeholder {
+    color: rgb(68, 23, 66);
+}
+
+#iptsenha:focus::placeholder {
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+
+#btnentrar {
+    display: inline-block;
+    padding: 4px 50px;
+    border: 1px solid rgb(68, 23, 66);
+    border-radius: 4px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 16px;
+    color: rgb(68, 23, 66);
+    z-index: 1;
+    background: none;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#btnentrar::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+#btnentrar::after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: rgb(68, 23, 66);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+
+#btnentrar:hover {
+    color: white;
+    border: 1px solid rgb(68, 23, 66);
+}
+
+#btnentrar:hover::before {
+    top: -35%;
+    background-color: rgb(68, 23, 66);
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+#btnentrar:hover:after {
+    top: -45%;
+    background-color: rgb(68, 23, 66);
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+a{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    font-size: 10pt;
+    color: rgba(255, 255, 255, 0.664);
+}
+
+
+footer {
+    text-align: center;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+
+
+}
+
+@media only screen and (min-width: 1024px) {
+    section {
+        display: flex;
+        justify-content: center;
+        gap: 100px;
+        flex-direction: row;
+    }
+
+    div.img {
+        width: 600px;
+        display: flex;
+        align-items: center;
+    }
+
+    div.container {
+        width: 500px;
+        height: 350px;
+    }
+
+    input {
+        width: 350px;
+    }
+
+    button#btn {
+        margin-top: 40px;
+    }
+
+}
